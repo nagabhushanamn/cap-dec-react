@@ -76,9 +76,9 @@
     2. execution-contexts  / scope
     3. FP - principles
     4. closures
-    5. 'this'  keyword / contxt's owner
+    5. 'this' keyword / contxt's owner
     6. use of 'prototype'
-    7. ES6 syntax & APIs 
+    7. ES6 syntax & APIs
     8. JS-modules
     9. concurrency model with Event-Loop ( adv )
     10. Async APIs i.e Promise & RxJS
