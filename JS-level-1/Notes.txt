@@ -89,6 +89,33 @@
 
 
 
+    -----------------------------------------------
+    .js-lang
+
+
+          ==> single-threaded lang , we can concurrent actions
+          ==> IO operations are Non-blocking 
+
+    ------------------------------------------------      
+
+
+    browser  e.g chrome
+
+    1. JS runtime/engine   ==> ECMAScript spec
+
+         a. single-call-stack
+         b. heap
+
+    2. Web APIs   ==> w3c recomm
+
+         i.e DOM, XHR, timer,...
+
+    3. Event/callback/message Queue   
+
+    4. Event-Loop 
+
+    ------------------------------------------------------       
+
 
 
 
