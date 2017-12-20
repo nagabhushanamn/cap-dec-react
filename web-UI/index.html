@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body class="container">
+    <div class="page-header"> Web UI </div>
+
+    <button class="btn btn-primary">+1</button>
+    <button class="btn btn-danger">-1</button>
+
+    <hr/>
+
+    <div class="well">
+        <input onchange="handleCountChange()" id="countField" type="text" />
+        <hr/>
+        <span id="countDisplay" class="badge">0</span>
+    </div>
+
+    <script>
+        let countField = document.getElementById('countField');
+        let countDisplay = document.getElementById('countDisplay');
+        let count = 0;
+
+        setInterval(() => {
+            count++;
+            countField.value = count;
+            countField.dispatchEvent(new Event('change'));
+        }, 2000);
+
+        function handleCountChange() {
+            countDisplay.innerText = count;
+        }
+    </script>
+
+</body>
+
+</html>

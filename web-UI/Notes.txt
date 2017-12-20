@@ -1,0 +1,21 @@
+
+
+
+by default , we  do Web UI using HTML elements
+
+
+    HTML-element  ( UI )
+
+        - props/attributes  ( data from parent element to child-element)
+        - state  ( element's private data)
+
+
+       e.g 
+
+        HTMLInputElement
+
+            props ==> i.e type,class, ......
+            state ==> i.e value
+
+
+     imp-note : when HTML element's state change, it will re-render by default       
