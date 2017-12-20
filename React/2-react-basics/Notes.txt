@@ -11,7 +11,6 @@ counter-app
 
 ------------------------------------------
 
-
 React component-API
 -------------------    
 
@@ -22,3 +21,5 @@ React component-API
     - mounting
     - updating
     - unmounting
+
+---------------------------------------------    
