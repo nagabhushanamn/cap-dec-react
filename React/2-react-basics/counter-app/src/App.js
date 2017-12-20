@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import HitButton from './components/HitButton';
+import TotalCountDisplay from './components/TotalCountDisplay';
 
 class App extends Component {
   constructor(props) {
     super(props);
     // console.log(props);
     console.log('App :: constructor()');
+    this.state = {
+      totalCount: 0
+    };
   }
+
+  incTotalCount() {
+    this.setState({
+      totalCount: this.state.totalCount + 1
+    });
+  }
+
   render() {
     console.log('App :: render()');
     return (
       <div className="container">
         <div className="page-header">react counter-app</div>
-        <HitButton label="Hit" />
+        <HitButton label="+10" onHit={this.incTotalCount.bind(this)} />
+        <hr />
+        <HitButton label="+100" onHit={this.incTotalCount.bind(this)}/>
+        <hr />
+        <TotalCountDisplay totalCount={this.state.totalCount} />
+
       </div>
     );
   }

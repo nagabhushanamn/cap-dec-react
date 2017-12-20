@@ -15,6 +15,7 @@ class HitButton extends Component {
         this.setState({
             count: this.state.count + 1
         });
+        this.props.onHit()
     }
 
     render() {
