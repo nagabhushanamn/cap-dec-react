@@ -12,10 +12,11 @@ class HitButton extends Component {
 
     handleBtnClick() {
         // console.dir(this);
+        let {label}=this.props;
         this.setState({
-            count: this.state.count + 1
+            count: this.state.count + Number.parseInt(label)
         });
-        this.props.onHit()
+        this.props.onHit(label)
     }
 
     render() {

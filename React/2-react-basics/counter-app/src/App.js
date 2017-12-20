@@ -12,9 +12,9 @@ class App extends Component {
     };
   }
 
-  incTotalCount() {
+  incTotalCount(v) {
     this.setState({
-      totalCount: this.state.totalCount + 1
+      totalCount: this.state.totalCount + Number.parseInt(v)
     });
   }
 
@@ -23,12 +23,13 @@ class App extends Component {
     return (
       <div className="container">
         <div className="page-header">react counter-app</div>
-        <HitButton label="+10" onHit={this.incTotalCount.bind(this)} />
+        <HitButton label="10" onHit={this.incTotalCount.bind(this)} />
         <hr />
-        <HitButton label="+100" onHit={this.incTotalCount.bind(this)}/>
+        <HitButton label="100" onHit={this.incTotalCount.bind(this)} />
+        <hr />
+        <HitButton label="-100" onHit={this.incTotalCount.bind(this)} />
         <hr />
         <TotalCountDisplay totalCount={this.state.totalCount} />
-
       </div>
     );
   }

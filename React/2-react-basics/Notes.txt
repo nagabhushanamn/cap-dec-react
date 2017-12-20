@@ -5,4 +5,20 @@ counter-app
 
   UI components
 
+    - App
     - HitButton
+    - TotalCountDisplay
+
+------------------------------------------
+
+
+React component-API
+-------------------    
+
+
+  The Component Lifecycle
+
+
+    - mounting
+    - updating
+    - unmounting
