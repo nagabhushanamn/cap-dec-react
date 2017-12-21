@@ -16,9 +16,12 @@ class Product extends Component {
             tab
         });
     }
+    handleBuyBtn() {
+        this.props.onBuy(this.props.product);
+    }
     renderBuyBtn(product) {
         if (product.canBuy)
-            return <button className="btn btn-sm btn-primary">buy</button>
+            return <button onClick={() => { this.handleBuyBtn() }} className="btn btn-sm btn-primary">buy</button>
         else
             return null;
     }

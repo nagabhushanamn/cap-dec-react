@@ -43,7 +43,7 @@ class ReviewForm extends Component {
                                     <textarea className="form-control" ref="bodyField"></textarea>
                                 </div>
                                 <button className="btn btn-primary">submit</button>
-                                <button onClick={() => { this.setState({ isFormOpen: false }) }} className="btn btn-danger"> cancel </button>
+                                <button type="button" onClick={() => { this.setState({ isFormOpen: false }) }} className="btn btn-danger"> cancel </button>
                             </form>
                         </div>
                     </div>
