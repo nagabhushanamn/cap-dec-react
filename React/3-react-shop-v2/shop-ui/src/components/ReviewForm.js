@@ -7,6 +7,16 @@ class ReviewForm extends Component {
             isFormOpen: false
         }
     }
+    handleFormSubmit(e) {
+        e.preventDefault();
+        let newReview = {
+            stars: this.refs.starsField.value,
+            author: this.refs.authorField.value,
+            body: this.refs.bodyField.value
+        }
+        this.props.onNewReview(newReview);
+        this.setState({ isFormOpen: false });
+    }
     renderRviewForm() {
         let { isFormOpen } = this.state;
         if (!isFormOpen) {
@@ -17,20 +27,20 @@ class ReviewForm extends Component {
                     <div className="panel panel-default">
                         <div className="panel-heading">ReviewForm</div>
                         <div className="panel-body">
-                            <form>
+                            <form onSubmit={(e) => { this.handleFormSubmit(e) }}>
                                 <div className="form-group">
                                     <label>stars</label>
-                                    <select className="form-control">
+                                    <select className="form-control" ref="starsField">
                                         {[1, 2, 3, 4, 5].map((n, i) => <option key={i}>{n}</option>)}
                                     </select>
                                 </div>
                                 <div className="form-group">
                                     <label>author</label>
-                                    <input className="form-control" />
+                                    <input className="form-control" ref="authorField" />
                                 </div>
                                 <div className="form-group">
                                     <label>body</label>
-                                    <textarea className="form-control"></textarea>
+                                    <textarea className="form-control" ref="bodyField"></textarea>
                                 </div>
                                 <button className="btn btn-primary">submit</button>
                                 <button onClick={() => { this.setState({ isFormOpen: false }) }} className="btn btn-danger"> cancel </button>

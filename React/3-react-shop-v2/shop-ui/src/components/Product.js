@@ -41,7 +41,7 @@ class Product extends Component {
                 panel = (
                     <div className="panel">
                         {this.renderReviews(product)}
-                        <ReviewForm />
+                        <ReviewForm onNewReview={(review) => { this.props.onNewReview(product.id, review) }} />
                     </div>
                 )
                 break;
