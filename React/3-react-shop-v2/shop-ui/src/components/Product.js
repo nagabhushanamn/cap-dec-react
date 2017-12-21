@@ -72,9 +72,9 @@ class Product extends Component {
                         <hr />
                         <section>
                             <ul className="nav nav-tabs">
-                                <li className={tab === 1 ? 'active' : ''}><a onClick={() => { this.handleTabChange(1) }}>Description</a></li>
-                                <li className={classnames({ active: tab === 2, other: true })}><a onClick={() => { this.handleTabChange(2) }}>Specification</a></li>
-                                <li className={classnames({ active: tab === 3, other: false })}><a onClick={() => { this.handleTabChange(3) }}>Reviews</a></li>
+                                <li className={tab === 1 ? 'active' : ''}><a href="#/" onClick={() => { this.handleTabChange(1) }}>Description</a></li>
+                                <li className={classnames({ active: tab === 2, other: true })}><a href="#/" onClick={() => { this.handleTabChange(2) }}>Specification</a></li>
+                                <li className={classnames({ active: tab === 3, other: false })}><a href="#/" onClick={() => { this.handleTabChange(3) }}>Reviews</a></li>
                             </ul>
                             {this.renderTabPanel(product)}
                         </section>

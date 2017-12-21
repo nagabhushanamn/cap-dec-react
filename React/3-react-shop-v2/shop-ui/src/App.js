@@ -86,7 +86,7 @@ class App extends Component {
       <div>
         <div className="container">
           <div className="page-header"> shopIT </div>
-          <span className="badge">{cart.length}</span> in cart &nbsp; | &nbsp; <a href="#" onClick={() => { this.setState({ viewCart: !this.state.viewCart }) }}> {this.state.viewCart?'view prodocts':'view cart'}</a>
+          <span className="badge">{cart.length}</span> in cart &nbsp; | &nbsp; <a href="#/" onClick={() => { this.setState({ viewCart: !this.state.viewCart }) }}> {this.state.viewCart?'view prodocts':'view cart'}</a>
           <hr />
           <div className="list-group">
             {this.renderProducts()}

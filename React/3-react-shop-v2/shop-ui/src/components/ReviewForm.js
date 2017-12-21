@@ -20,7 +20,7 @@ class ReviewForm extends Component {
     renderRviewForm() {
         let { isFormOpen } = this.state;
         if (!isFormOpen) {
-            return <button onClick={() => { this.setState({ isFormOpen: true }) }} className="btn btn-default"> New Review </button>
+            return <a href="#/" onClick={() => { this.setState({ isFormOpen: true }) }} className=""> New Review </a>
         } else {
             return (
                 <div className="col-xs-8 col-sm-8 col-md-6">

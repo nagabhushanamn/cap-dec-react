@@ -1,0 +1,13 @@
+
+
+UI-app  : counter-app
+-----------------------
+
+action(s):
+
+    INCREMENT   ==> {type:INCREMENT,value:10}
+    DECREMENT   ==> {type:DECREMENT,value:10}
+    .....
+
+
+---------------------------------------------    
