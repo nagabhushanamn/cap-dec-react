@@ -14,12 +14,15 @@ class ViewCart extends Component {
     }
     render() {
         return (
-            <div>
-                <table className="table table-bordered">
-                    <tbody>
-                        {this.renderCartItems()}
-                    </tbody>
-                </table>
+            <div className="panel panel-default">
+                <div className="panel-heading"> Items in cart </div>
+                <div className="panel-body">
+                    <table className="table table-bordered">
+                        <tbody>
+                            {this.renderCartItems()}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
