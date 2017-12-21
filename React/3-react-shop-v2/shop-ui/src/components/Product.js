@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Review from './Review';
 
 class Product extends Component {
 
@@ -9,20 +10,22 @@ class Product extends Component {
             tab: 1
         }
     }
-
-
     handleTabChange(tab) {
         this.setState({
             tab
         });
     }
-
     renderBuyBtn(product) {
         if (product.canBuy)
             return <button className="btn btn-sm btn-primary">buy</button>
         else
             return null;
     }
+
+    renderReviews(product) {
+        return product.reviews.map((review, idx) => <Review review={review} />);
+    }
+
     renderTabPanel(product) {
         let { tab } = this.state;
         let panel;
@@ -34,7 +37,13 @@ class Product extends Component {
                 panel = <div className="panel"><p>Not Yet</p></div>
                 break;
             case 3:
-                panel = <div className="panel"><p>None yet</p></div>
+                panel = (
+                    <div className="panel">
+                        <p>
+                            {this.renderReviews(product)}
+                        </p>
+                    </div>
+                )
                 break;
             default:
                 panel = null;

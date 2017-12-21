@@ -15,14 +15,22 @@ class App extends Component {
           price: '198000',
           description: 'New mac pro',
           canBuy: true,
-          imagePath: 'images/Laptop.png'
+          imagePath: 'images/Laptop.png',
+          reviews: [
+            { stars: 5, author: 'nag@gmail.com', body: 'Good one' },
+            { stars: 3, author: 'indu@gmail.com', body: 'costly one' }
+          ]
         },
         {
           name: 'Mobile',
           price: '18000',
           description: 'New  pro',
           canBuy: true,
-          imagePath: 'images/Mobile.png'
+          imagePath: 'images/Mobile.png',
+          reviews: [
+            { stars: 5, author: 'nag@gmail.com', body: 'Good one' },
+            { stars: 3, author: 'indu@gmail.com', body: 'costly one' }
+          ]
         }
       ]
     };
@@ -31,7 +39,7 @@ class App extends Component {
   renderProducts() {
     let { products } = this.state;
     return products.map((product, idx) => {
-      return <Product product={product} key={idx} index={idx}/>
+      return <Product product={product} key={idx} index={idx} />
     })
   }
 
