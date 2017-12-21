@@ -23,7 +23,7 @@ class Product extends Component {
     }
 
     renderReviews(product) {
-        return product.reviews.map((review, idx) => <Review review={review} />);
+        return product.reviews.map((review, idx) => <Review key={idx} review={review} />);
     }
 
     renderTabPanel(product) {
@@ -39,9 +39,7 @@ class Product extends Component {
             case 3:
                 panel = (
                     <div className="panel">
-                        <p>
-                            {this.renderReviews(product)}
-                        </p>
+                        {this.renderReviews(product)}
                     </div>
                 )
                 break;
