@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Review from './Review';
+import ReviewForm from './ReviewForm';
 
 class Product extends Component {
 
@@ -40,6 +41,7 @@ class Product extends Component {
                 panel = (
                     <div className="panel">
                         {this.renderReviews(product)}
+                        <ReviewForm />
                     </div>
                 )
                 break;
