@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo_ds": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "cap-shop-db",
+    "password": "",
+    "name": "mongo_ds",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

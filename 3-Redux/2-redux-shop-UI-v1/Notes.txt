@@ -1,0 +1,21 @@
+
+
+UI-app  : shop-UI
+-----------------------
+
+action(s):
+
+    - BUY
+    - SUBMIT_NEW_REVIEW
+    
+    - LOAD_PRODUCRS
+    _ LOAD_PRODUCT_REVIEWS
+
+
+---------------------------------------------    
+
+
+Redux with Async Actions
+-----------------------
+
+

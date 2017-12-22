@@ -1,0 +1,40 @@
+
+
+
+.js-lang .
+
+we can execute function 2 ways
+
+==> sync
+
+
+   function f1(){
+
+   }
+   function f2(){
+       f1(); // sync....
+   }
+
+==> async
+
+
+    function f1(){
+
+       setTimeout(function(){},5000)     
+
+    }   
+
+    on event , by default every handler executes async...
+
+
+---------------------------------------------------------------------
+
+
+
+ to execute any module functions async,  we async APIs
+
+
+ ==> Promise API  ( from ES6 )
+ ==> RxJS
+
+ ---------------------------------------------------------------------

@@ -1,0 +1,42 @@
+
+
+
+UnitTesting ==> AAA
+
+A==> Arrange
+A==> Act
+A==> Assert
+
+---------------------------------
+
+
+UnitTesting F.Ws
+
+  ==> To write test-cases
+  ==> To run Test-Cases using TestRunners , collect result
+
+----------------------------------
+
+for .javascript lang :
+
+UnitTesting F.Ws
+
+ ==> Jasmine
+ ==> Mocha
+ ...
+
+ ==> Jest
+
+
+TestRunners 
+
+ ==> karma
+ 
+ --------------------------------------
+
+
+
+
+
+
+
